@@ -1,0 +1,9 @@
+.svg-icons {
+	height: 100%;
+	width: auto;
+	color: #86ebe6;
+}
+
+.svg-icons:hover {
+	color: blue;
+}

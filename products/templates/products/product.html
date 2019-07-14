@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+	<link rel="stylesheet" type="text/css" href="{% static 'products/product.css' %}">
+{% endblock %}
+
+
+{% block content %}
+{{ product.product_name }}
+
+{{ product.image_url }}
+
+<p>Nutriscore :</p>
+{% if product.nutriscore == 'a' %}
+  A
+{% elif product.nutriscore == 'b' %}
+  B
+{% elif product.nutriscore == 'c' %}
+  C
+{% elif product.nutriscore == 'd' %}
+  D
+{% elif product.nutriscore == 'e' %}
+  E
+
+
+<a href="#"><p>Voir la fiche d'OpenFoodFacts</p></a>
+
+<p>Repères nutritionnels pour 100g :</p>
+
+
+{% endblock %}
