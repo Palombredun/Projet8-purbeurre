@@ -22,11 +22,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = S3Connection(os.environ['DJANGO_KEY']
-#SECRET_KEY = '&1uk#2&hy@(8o9lp%vtzr!@pe5$yai1d^^vv5hmtsq!gr)miyg'
+#SECRET_KEY = S3Connection(os.environ['DJANGO_KEY'])
+SECRET_KEY = '&1uk#2&hy@(8o9lp%vtzr!@pe5$yai1d^^vv5hmtsq!gr)miyg'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://purebutter.herokuapp.com/']
 
