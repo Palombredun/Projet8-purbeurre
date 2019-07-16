@@ -2,7 +2,7 @@ from difflib import SequenceMatcher
 
 from django.shortcuts import render
 
-from products.models import Product, Category
+#from products.models import Product, Category
 
 
 def search(request):
@@ -11,6 +11,7 @@ def search(request):
     Else, select the product corresponding the most to the query and
     return the template and up to 6 products with a better nutriscore than the query.
     """
+    pass
     if 'query' in request.GET:
         query =  request.GET['query']
         products = Product.objects.filter(product_name__icontains=query)
