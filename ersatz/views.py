@@ -2,7 +2,7 @@ from difflib import SequenceMatcher
 
 from django.shortcuts import render
 
-#from products.models import Product, Category
+from products.models import Product, Category
 
 
 def search(request):
@@ -41,4 +41,7 @@ def search(request):
                     ersatz.append(prod)
                     
             # return only the top 6 of the products
-            return render(request, 'ersatz/result.html', {'products': ersatz[:6]})
+            return render(request, 'ersatz/result.html', 
+                {'search': product_to_replace, 
+                'products': ersatz[:6]
+                })

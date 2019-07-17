@@ -7,26 +7,55 @@
 
 
 {% block content %}
-{{ product.product_name }}
+{% for prod in product %}
 
-{{ product.image_url }}
+<header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
+        <div class="row">
+      		<img src="{{ prod.image_url }}" clas="product-image" alt="image-produit">
+        </div>
+      	<div class="row">
+      		<div class="col-lg-10 mx-auto product-name">
+      	  		<p>{{ prod.product_name }}</p>
+        	</div>
+      	</div>
+  	</div>
+</header>
 
-<p>Nutriscore :</p>
-{% if product.nutriscore == 'a' %}
-  A
-{% elif product.nutriscore == 'b' %}
-  B
-{% elif product.nutriscore == 'c' %}
-  C
-{% elif product.nutriscore == 'd' %}
-  D
-{% elif product.nutriscore == 'e' %}
-  E
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			{% if prod.nutriscore == 'a' %}
+			<img src="{% url 'products/img/nutriscore_A.png' %}" alt='nutriscore_A'>
+			{% elif prod.nutriscore == 'b' %}
+  			<img src="{% url 'products/img/nutriscore_B.png' %}" alt='nutriscore_B'>
+			{% elif prod.nutriscore == 'c' %}
+  			<img src="{% url 'products/img/nutriscore_C.png' %}" alt='nutriscore_C'>
+			{% elif prod.nutriscore == 'd' %}
+			<img src="{% url 'products/img/nutriscore_D.png' %}" alt='nutriscore_D'>
+			{% elif prod.nutriscore == 'e' %}
+			<img src="{% url 'products/img/nutriscore_E.png' %}" alt='nutriscore_E'>
+			{% endif %}
+		</div>
 
+		<div class="col-lg-6 offset-lg-3">
+			<p>Repères nutritionnels pour 100g :</p>
+			<ul>
+				<li>Calories : {{ prod.energy_100g}}</li>
+				<li>Lipides : {{ prod.fat_100g}}</li>
+				<li>Graisses non saturées : {{ prod.saturated_fats_100g}}</li>
+				<li>Glucides : {{ prod.carbohydrates_100g}}</li>
+				<li>Sucre : {{ prod.sugars_100g}}</li>
+				<li>Fibres : {{ prod.fibers_100g}}</li>
+				<li>Proteines : {{ prod.proteins_100g}}</li>
+				<li>Sel : {{ prod.salt_100g}}</li>
+			</ul>
+		</div>
 
-<a href="#"><p>Voir la fiche d'OpenFoodFacts</p></a>
-
+<!--
 <p>Repères nutritionnels pour 100g :</p>
+-->
 
+{% endfor %}
 
 {% endblock %}

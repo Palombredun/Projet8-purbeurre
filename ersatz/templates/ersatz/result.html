@@ -24,12 +24,12 @@
 	<br>
 	<br>
 	<br>
+	<p>Vous pouvez remplacer cet aliment par :</p>
 	<div class="row">
-		Vous pouvez remplacer cet aliment par :
 		{% if products %}
 			{% for product in products %}
 			<div class="col-lg-4">
-				<a href="#">
+				<a href="{% url 'product' id=product.id %}">
 					<img src="{{ product.image_url }}"/>
 				</a>
 				<div class="macaron">
