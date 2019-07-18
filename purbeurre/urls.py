@@ -27,7 +27,7 @@ urlpatterns = [
     path('utilisateur/', include('signup.urls')),
     path('utilisateur/', include('users.urls')),
     path('utilisateur/', include('profiles.urls')),
-    path('utilisateur/', include('favourites.urls')),
+    path('utilisateur/', include('favorites.urls')),
     # search products
     path('', include('ersatz.urls')),
     # product page

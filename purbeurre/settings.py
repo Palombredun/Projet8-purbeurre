@@ -43,7 +43,7 @@ INSTALLED_APPS = [
 
     'core',
     'ersatz',
-    'favourites',
+    'favorites',
     'products',
     'profiles',
     'signup',

@@ -5,4 +5,4 @@ from products.models import Product
 
 class UserProfile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	favorites = models.ManyToManyField(Product)
+	favourites = models.ManyToManyField(Product)
