@@ -1,17 +1,19 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
-from profiles.models import UserProfile
 from products.models import Product
 
 @login_required
-def favorite(request):
-    current_user = request.user
+def favorites(request):
     if request.method == 'POST':
+        current_user = request.user
         id_product = request.POST['id_product']
         product = Product.objects.get(id=id_product)
-        new_favorite = UserProfile(current_user, product)
+        new_favorite = User.favorites(product)
         new_favorite.save()
     else:
-        favorites = current_user.UserProfile.favorite.objects.all()
-    return render(request, 'favorites/favorites.html', favorites)
+        current_user = request.user
+        user = User.objects.get(id=current_user.id)
+        favorites = user.favorites.all()
+    return render(request, 'favorites/favorites.html', {'favorites': favorites})

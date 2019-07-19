@@ -1,4 +1,36 @@
-img {
+header.masthead {
+  position: relative;
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - 56px);
+  background-image: url("img/header.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+header.masthead p {
+  font-weight: 900;
+  font-size: 1em;
+}
+
+.item {
+  vertical-align: top;
+  display: inline-block;
+  text-align: center;
+  width: 120px;
+}
+
+.caption {
+  display: block;
+}
+
+.image-search {
+  height: 150px;
+  width: auto;
+  position: absolute;
+  bottom: -75px;
+}
+
+.image-product {
 	margin-top: 40px;
 	margin-bottom: -60px;
 	display: block;
@@ -12,11 +44,16 @@ img {
 	border-radius: 5%;
 }
 
-p {
+.product-name {
 	text-align: center;
 	margin-top: -25px;
 }
 
+.replacement {
+	padding: 1em;
+	font-size: 1.5em;
+	text-align: center;
+}
 
 .macaron {
   position: relative;
@@ -28,12 +65,8 @@ p {
 }
 
 svg {
-	width: 20px;
-	height: 20px;
-}
-
-.toto {
-	background: white;
+  width: 25px;
+  height :25px;
 }
 
 form{

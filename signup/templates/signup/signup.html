@@ -3,20 +3,18 @@
 
 <head>
   {% block head %}
+  <title>Inscription</title>
   <link rel="stylesheet" type="text/css" href="{% static 'signup/signup.css' %}">
   {% endblock %}
 </head>
 
 {% block content %}
-
-
 <div class="container">
   <br>
   <br>
   <br>
   <br>
-
-  <h2>Se connecter</h2>
+  <h2>Créer un compte</h2>
   <form method="post">
     {% csrf_token %}
     {% for field in form %}
@@ -31,12 +29,8 @@
         {% endfor %}
       </p>
     {% endfor %}
-    <button class="btn btn-xl btn-primary" type="submit">S'inscrire'</button>
+    <button class="btn btn-xl btn-primary" type="submit">S'inscrire</button>
   </form>
   
-  <br>
-  <br>
-  <br>
-  <br>
 </div>
 {% endblock %}

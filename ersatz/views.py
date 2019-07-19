@@ -18,7 +18,6 @@ def search(request):
 
         if products.count() == 0:
             return render(request, 'ersatz/result.html')
-        
         else:
             foo = []
             for product in products:

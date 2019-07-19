@@ -28,13 +28,11 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="form-inline">
-          <form action="/Recherche/" method="GET">
-            <input class="form-control mr-1" type="text" name="query" placeholder="Remplacer un aliment" required>
-            <button type="submit" class="btn btn-xl btn-primary">Chercher</button>
-          </form>
-        </div>
+      <div class="container">
+        <form class="form-inline" action="/Recherche/" method="GET">
+          <input type="text" class="form-control col-lg-8 offset-lg-1" placeholder="Remplacer un aliment" name="query" required>
+          <button type="submit" class="btn btn-xl btn-primary">Chercher</button>
+        </form>
       </div>
     </div>
 

@@ -14,6 +14,7 @@ body {
   font-family: "Scope One", 'Helvetica Neue', Arial,sans-serif;
 }
 
+
 hr {
   max-width: 50px;
   border-width: 3px;
@@ -66,12 +67,13 @@ section {
 }
 
 #logo-remy {
-  width: 75px;
-  height: 150px;
+  margin-top: 50px;
+  width: auto;
+  height: 200px;
 }
 
 #logo-colette {
-  width: 100px;
+  width: auto;
   height: 250px;
 }
 
@@ -80,7 +82,7 @@ section {
 }
 
 #hr-about: {
-  border-color: #e8a75d;
+  border-color: #345a61;
 }
 
 #contact {
