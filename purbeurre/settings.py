@@ -59,7 +59,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
-    # whitenoise pour static files :
+    # whitenoise for static files :
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
