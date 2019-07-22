@@ -5,10 +5,14 @@ from django.contrib.auth.models import User
 from products.models import Product
 
 @login_required
-def favorites(request):
+def favorites(request, id):
+    current_user = request.user
+    product = Product.objects.get(id=id)
+
+
     if request.method == 'POST':
         current_user = request.user
-        id_product = request.POST['id_product']
+        id_product = request.POST['product_id']
         product = Product.objects.get(id=id_product)
         new_favorite = User.favorites(product)
         new_favorite.save()
