@@ -45,10 +45,8 @@
 					{% endif %}
 				</div>
 				<p class="product-name">{{ product.product_name }}</p>
-				<form class="my-form" action="#" method="post">
-        	        <input type="hidden" name="product_id" value="{{ product.id }}">
-				{% if user.is_authenticated %}
-				
+
+				{% if user.is_authenticated %}				
                 	<form class="" action="{% url 'favorites' %}" method="POST">
                 		{% csrf_token %}
                 		<input type="hidden" name="product_id" value="{{ product.id }}">
