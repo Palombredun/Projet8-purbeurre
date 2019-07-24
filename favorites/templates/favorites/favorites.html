@@ -18,7 +18,7 @@
 </header>
 <div class="container">
 	<div class="row">
-		{% if products %}
+		{% if favorites %}
 			{% for product in favorites %}
 			<div class="col-lg-4">
 				<a href="{% url 'product' id=product.id %}">
