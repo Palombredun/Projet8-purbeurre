@@ -3,11 +3,12 @@
 
 {% block head %}
 	<title>Mes Favoris</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'ersatz/result.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'favorites/favorites.css' %}">
 {% endblock %}
 
 
 {% block content %}
+
 <header class="masthead text-center text-white d-flex">
     <div class="container my-auto">
       <div class="row">
@@ -43,7 +44,7 @@
     	{% endfor %}
 
 		{% else %}
-			<p>Aucun produit n'a été trouvé.</p>
+			<p>Vous n'avez enregistré aucun favori pour le moment.</p>
 		{% endif %}
 	</div>
 {% endblock %}

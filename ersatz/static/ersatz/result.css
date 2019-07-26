@@ -59,17 +59,21 @@ header.masthead p {
   width: 50px;
 }
 
-svg {
-  width: 25px;
-  height :25px;
-}
-
 form{
     width:50%; 
     margin:0 auto;
 	margin-top: -1.5em;
 }
 
-.btn-primary-outline {
-  background-color: transparent;
+.btn-light {
+  margin: 5px;
+}
+
+.fa-save {
+  width: 25px;
+  height: 25px;
+}
+
+.products {
+  margin-bottom: 50px;
 }
