@@ -17,13 +17,17 @@
       </div>
       <div class="row">
       	<div class="col-lg-10 mx-auto item">
-      		<p>{{ search.product_name }}</p>      		
+      		<p class="query-name">{{ search.product_name }}</p>      		
         </div>
       </div>
   </div>
 </header>
 <div class="container products">
-	<p class="replacement">Vous pouvez remplacer cet aliment par :</p>
+	{% if user.is_authenticated %}
+		<p class="replacement">Vous pouvez remplacer cet aliment par :</p>
+	{% else %}
+		<p class="replacement">Vous devez avoir un compte pour sauvegarder des aliments</p>
+	{% endif %}
 	<div class="row">
 		{% if products %}
 			{% for product in products %}
@@ -56,8 +60,7 @@
                 		</button>
                 	</form>
                 {% endif %}
-			</form>
-		</div>    	
+			</div>    	
     	{% endfor %}
 
 		{% else %}

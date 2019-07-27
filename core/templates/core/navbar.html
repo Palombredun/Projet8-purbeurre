@@ -11,7 +11,7 @@
             
             <div class="col-lg-3 offset-lg-5">
                 <form action="/Recherche/" method="GET">
-                        <input class="form-control-sm" type="text" name="query" placeholder="Chercher..." required>
+                        <input class="form-control-sm" type="text" name="query" placeholder="Chercher..." id="navbar-input" required>
                 </form>
             </div>
 
@@ -19,24 +19,24 @@
                 <ul class="navbar-nav ml-auto">
                     {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="svg-icons" href="{% url 'profile' %}">
+                            <a class="svg-icons profile" href="{% url 'profile' %}">
                                 {% include 'core/img/user.svg' %}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="svg-icons" href="{% url 'favorites' %}">
+                            <a class="svg-icons favorites" href="{% url 'favorites' %}">
                                 {% include 'core/img/carrot.svg' %}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="svg-icons" href="{% url 'logout' %}">
+                            <a class="svg-icons logout" href="{% url 'logout' %}">
                                 {% include 'core/img/sign-out.svg' %}
                             </a>
                         </li>
     
                     {% else %}
                     <li class="nav-item">
-                        <a class="svg-icons" href="{% url 'login' %}">
+                        <a class="svg-icons login" href="{% url 'login' %}">
                             {% include 'core/img/sign-in.svg' %}
                         </a>
                     </li>

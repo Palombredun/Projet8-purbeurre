@@ -10,6 +10,7 @@ django = "*"
 gunicorn = "*"
 boto = "*"
 whitenoise = "*"
+selenium = "*"
 
 [requires]
 python_version = "3.6"
