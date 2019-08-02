@@ -54,7 +54,7 @@
                 	<form method="post" action="{% url 'favorites' %}">
                 		{% csrf_token %}
                 		<input type="hidden" name="id_product" value="{{ product.id }}">
-                		<button type="submit" class="btn btn-light">
+                		<button type="submit" class="btn btn-light" id="{{ product.product_name }}">
                 			<i class="far fa-save"></i>
                 			Sauvegarder
                 		</button>
