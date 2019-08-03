@@ -12,7 +12,9 @@
     <div class="container my-auto">
       <div class="row">
         <div class="col-lg-10 mx-auto item">
-          <img src="{{ search.image_url }}" class="photo-product" alt="photo {{ search.product_name }}">
+          {% if products %}
+          	<img src="{{ search.image_url }}" class="photo-product" alt="photo {{ search.product_name }}">
+          	{% endif %}
         </div>
       </div>
       <div class="row">
